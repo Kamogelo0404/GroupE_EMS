@@ -1,7 +1,11 @@
 button{
-    margin: 10px;
+    margin: 5px;
     width: 8%
     
+  }
+
+  div{
+    text-align: left;
   }
 
 

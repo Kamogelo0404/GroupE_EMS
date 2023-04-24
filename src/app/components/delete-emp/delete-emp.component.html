@@ -1,8 +1,9 @@
 <app-header></app-header><br>
 
 <div class="container">
-  <h2>Delete Employee</h2>
 
+  <h2>Delete Employee</h2>
+    <h4>Are you sure you want to delete this employee?</h4>
   <form action="">
 
     <div class="col-md-6">
@@ -18,8 +19,9 @@
     </div>
 
     <div>
-      <a routerLink="../view-all-emp" class="btn btn-primary" (click)="confirmedDelete()">Yes</a>
-      <a routerLink="../view-all-emp" class="btn btn-primary" (click)="back()">Cancel</a>
+      <button class="btn btn-primary" type="button" [routerLink]="['/view-all-emp']">Yes</button>
+      <button class="btn btn-primary" type="button" [routerLink]="['/view-all-emp']">Cancel</button>
+
     </div>
   </form>
 </div>
