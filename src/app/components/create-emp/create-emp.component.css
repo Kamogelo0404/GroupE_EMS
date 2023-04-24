@@ -17,3 +17,7 @@
 .btn:hover{
     background-color:gray ;
 } */
+
+button{
+    width: 10%;
+}
