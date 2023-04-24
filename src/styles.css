@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-.container{
-    align-content: center;
-    background-color: limegreen;
+h1{
+    padding-left: 4rem
+}
+.form-container{
+    padding-left: 4rem;
+    padding-right: 30rem;
 }
