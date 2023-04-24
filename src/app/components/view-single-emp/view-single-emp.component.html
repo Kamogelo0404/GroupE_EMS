@@ -1,1 +1,16 @@
-<p>view-single-emp works!</p>
+<div class="container">
+    <h1>View Employee</h1>
+    <h3>Details: </h3>
+    <!-- <h1>View Employee</h1>
+    <h3>Details</h3>
+    <h5>Name: </h5>
+    <h5>Surname: </h5>
+    <h5>Email: </h5>
+    <h5>Contact: </h5> -->
+    <app-employee-form></app-employee-form>
+    <p></p>
+    <button type="button" class="btn btn-info" [routerLink]="['/edit-emp']">Edit</button>
+    <button type="button" class="btn btn-danger" [routerLink]="['/delete-emp']" >Delete</button>
+    <button type="button" class="btn btn-dark" [routerLink]="['/view-all-emp']" >Back</button>
+
+  </div>
