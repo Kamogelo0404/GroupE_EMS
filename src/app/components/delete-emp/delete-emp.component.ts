@@ -16,6 +16,5 @@ export class DeleteEmpComponent {
   confirmedDelete(){
     this.router.navigate(['/view-all-emp']);
   }
-  
 }
 

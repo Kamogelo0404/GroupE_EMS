@@ -1,28 +1,25 @@
+<app-header></app-header><br>
+
 <div class="container">
   <h2>Delete Employee</h2>
 
   <form action="">
+
+    <div class="col-md-6">
+      <label for="surname" class="form-label">Last Name: <b>Doe</b></label>
+    </div>
+
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label>
+    </div>
+
+    <div class="col-md-6">
+      <label for="contact" class="form-label">Contact: <b>0118 999 881 999 119 7253</b></label>
+    </div>
+
     <div>
-      <div class="col-md-6">
-        <label for="firstname" class="form-label">First Name: <b>John</b></label>
-      </div>
-
-      <div class="col-md-6">
-        <label for="surname" class="form-label">Last Name: <b>Doe</b></label>
-      </div>
-
-      <div class="col-md-6">
-        <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label>
-      </div>
-
-      <div class="col-md-6">
-        <label for="contact" class="form-label">Contact: <b>0118 999 881 999 119 7253</b></label>
-      </div>
+      <a routerLink="../view-all-emp" class="btn btn-primary" (click)="confirmedDelete()">Yes</a>
+      <a routerLink="../view-all-emp" class="btn btn-primary" (click)="back()">Cancel</a>
     </div>
   </form>
-
-  <div>
-    <a routerLink="../view-all-emp" class="btn btn-primary" (click)="confirmedDelete()">Yes</a>
-    <a routerLink="../view-all-emp" class="btn btn-primary" (click)="back()">Cancel</a> <!-- TODO: Add back to previous page router link -->
-  </div>
 </div>

@@ -1,7 +1,9 @@
-<div class="container">
-  <h2>Create Employee</h2>
-  <app-employee-form></app-employee-form>
+<h2>Create Employee</h2>
+<app-employee-form></app-employee-form>
 
-  <a routerLink="../view-all-emp" class="btn btn-primary" (click)="save()">Save</a> 
-  <a routerLink="../view-all-emp" class="btn btn-primary" (click)="back()">Cancel</a>
+
+  <div>
+    <button class="btn btn-primary" type="button" [routerLink]="['/view-all-emp']">Save</button>
+    <button class="btn btn-primary" type="button">Cancel</button>
+   
 </div>
