@@ -11,6 +11,6 @@ export class CreateEmpComponent {
   constructor(private router: Router) {}
 
   saveNewEmp(){
-    this.router.navigate(['/view-all-emp']);
+    alert("hi there");
   }
 }
