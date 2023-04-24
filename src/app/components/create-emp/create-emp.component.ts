@@ -10,7 +10,11 @@ export class CreateEmpComponent {
 
   constructor(private router: Router) {}
 
-  saveNewEmp(){
+  save(){
+    this.router.navigate(['/view-all-emp']);
+  }
+
+  back(){
     this.router.navigate(['/view-all-emp']);
   }
 }

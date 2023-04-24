@@ -1,36 +1,28 @@
 <div class="container">
-    <h2>Are you sure you want to delete this employee?</h2>
+  <h2>Delete Employee</h2>
 
-    <app-employee-form></app-employee-form>
-
+  <form action="">
     <div>
-        <a href="#" routerLink="../view-all-emp" class="btn btn-primary" (click)="confirmedDelete()">Yes</a>
-        <a href="#" class="btn btn-primary">Cancel</a> <!-- TODO: Add back to previous page router link -->
-    </div>
+      <div class="col-md-6">
+        <label for="firstname" class="form-label">First Name: <b>John</b></label>
+      </div>
 
-</div>
+      <div class="col-md-6">
+        <label for="surname" class="form-label">Last Name: <b>Doe</b></label>
+      </div>
 
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label>
+      </div>
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+      <div class="col-md-6">
+        <label for="contact" class="form-label">Contact: <b>0118 999 881 999 119 7253</b></label>
       </div>
     </div>
-  </div> -->
+  </form>
 
-  
-
+  <div>
+    <a routerLink="../view-all-emp" class="btn btn-primary" (click)="confirmedDelete()">Yes</a>
+    <a routerLink="../view-all-emp" class="btn btn-primary" (click)="back()">Cancel</a> <!-- TODO: Add back to previous page router link -->
+  </div>
+</div>

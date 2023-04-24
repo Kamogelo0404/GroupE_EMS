@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-emp',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class EditEmpComponent {
 
+  constructor(private router: Router) {}
+  
+  backToEmpolyee(){
+    this.router.navigate(['/view-emp']);
+  }
 }

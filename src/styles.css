@@ -1,10 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-.container{
-    align-content: center;
-    margin: 20px;
+
+:root{
+    --light: #E9F8F9;
+    --light-blue: #C0EEF2;
+    --dark-blue: #537FE7;
+    --dark: #181823;
 }
 
-.button, .btn{
+
+.container{
+    align-content: center;
+    background-color: greenyellow;
+}
+
+/* .button, .btn{
+    padding: 5px;
+} */
+h1{
+    padding-left: 4rem;
+}
+
+.btn{
+    background-color: var(--dark-blue);
+    outline: none;
     padding: 5px;
 }
+
+.btn:hover{
+    background-color: var(--light);
+    color:var(--dark-blue);
+   
+}
+
+

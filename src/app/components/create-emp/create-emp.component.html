@@ -1,10 +1,7 @@
+<div class="container">
+  <h2>Create Employee</h2>
+  <app-employee-form></app-employee-form>
 
-<app-header></app-header><br>
-
-<h2>Create Employee</h2>
-<app-employee-form></app-employee-form>
-
-
-  <div>
-    <a href="#" routerLink="../create" class="btn btn-primary" (click)="saveNewEmp()">Save</a>
+  <a routerLink="../view-all-emp" class="btn btn-primary" (click)="save()">Save</a> 
+  <a routerLink="../view-all-emp" class="btn btn-primary" (click)="back()">Cancel</a>
 </div>

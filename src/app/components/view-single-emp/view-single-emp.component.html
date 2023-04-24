@@ -1,17 +1,31 @@
 <app-header></app-header><br>
 
-<div class="edit-container">
-    <h1>View Employee</h1>
-    <h3>Details: </h3>
-    <!-- <h1>View Employee</h1>
-    <h3>Details</h3>
-    <h5>Name: </h5>
-    <h5>Surname: </h5>
-    <h5>Email: </h5>
-    <h5>Contact: </h5> -->
-    <app-employee-form></app-employee-form>
+<div class="container">
+    <h2>View Employee</h2>
+    <h4>Details: </h4>
+    <form action="">
+      <div>
+        <div class="col-md-6">
+          <label for="firstname" class="form-label">First Name: <b>John</b></label>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="surname" class="form-label">Last Name: <b>Doe</b></label>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="contact" class="form-label">Contact: <b>0118 999 881 999 119 7253</b></label>
+        </div>
+      </div>
+    </form>
     <p></p>
-    <button type="button" class="btn btn-info" [routerLink]="['/edit-emp']">Edit</button>
-    <button type="button" class="btn btn-danger" [routerLink]="['/delete-emp']" >Delete</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/edit-emp']">Edit</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/delete-emp']" >Delete</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/view-all-emp']" >Back</button>
+    
 
   </div>
