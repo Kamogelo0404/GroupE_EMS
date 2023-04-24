@@ -28,6 +28,11 @@
    
 }
 
+form{
+    padding-left: 0rem;
+    padding-right: 45rem;
+}
+
 
 h1,h2,h3,h4 p, a, label, input{
     color: var(--dark);
