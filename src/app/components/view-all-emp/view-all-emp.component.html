@@ -4,14 +4,14 @@
 <button type="button" class="btn btn-primary" [routerLink]="['/create-emp']">Create</button>
 <table class="table">
     <thead>
-    <tr>
+      <tr>
         <th scope="col">ID</th>
         <th scope="col">Employee name</th>
         <th scope="col">employee surname</th>
         <th scope="col">Email</th>
         <th scope="col">Contact Number</th>
         <th scope="col">Function</th>
-    </tr>
+      </tr>
     </thead>
     <tbody>
       <!-- <tr *ngFor="let product of products"> -->
@@ -21,14 +21,13 @@
         <td></td>
         <td></td>
         <td></td>
-        <td>
-            <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-primary" type="button" [routerLink]="['/view-emp']">View</button>
-                <button class="btn btn-primary" type="button" [routerLink]="['/edit-emp']">Edit</button>
-                <button class="btn btn-primary" type="button" [routerLink]="['/delete-emp']">Delete</button>
-            </div>
+        <td><div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary" type="button" [routerLink]="['/view-emp']">View</button>
+          <button class="btn btn-primary" type="button" [routerLink]="['/edit-emp']">Edit</button>
+          <button class="btn btn-primary" type="button" [routerLink]="['/delete-emp']">Delete</button>
+        </div>
         </td>
         <!-- <td><a href="#" routerLink="../edit" class="btn btn-primary" (click)="goToEdit()"></a></td> -->
-        </tr>
+      </tr>
     </tbody>
-</table> 
+  </table> 

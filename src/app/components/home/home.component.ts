@@ -15,3 +15,4 @@ export class HomeComponent {
     this.router.navigate(['/view-all-emp']);
   }
 }
+
