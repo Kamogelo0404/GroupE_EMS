@@ -2,5 +2,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 .container{
     align-content: center;
-    background-color: limegreen;
+    margin: 20px;
+}
+
+.button, .btn{
+    padding: 5px;
 }
