@@ -11,6 +11,8 @@ import { DeleteEmpComponent } from './components/delete-emp/delete-emp.component
 import { CreateEmpComponent } from './components/create-emp/create-emp.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
+import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EmployeeFormComponent } from './components/employee-form/employee-form.
     DeleteEmpComponent,
     CreateEmpComponent,
     HeaderComponent,
-    EmployeeFormComponent
+    EmployeeFormComponent,
+    BackButtonComponent,
+    DeleteButtonComponent
   ],
   imports: [
     BrowserModule,

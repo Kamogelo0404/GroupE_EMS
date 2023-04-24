@@ -12,11 +12,7 @@
     align-content: center;
 }
 
-h1{
-    padding-left: 4rem;
-}
-
-a .btn, button{
+.btn, button{
     background-color: var(--dark-blue);
     outline: none;
     padding: 5px;
