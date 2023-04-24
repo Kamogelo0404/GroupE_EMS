@@ -1,12 +1,10 @@
 <app-header></app-header><br>
-<div class="editemployee">
-    <h1>Edit Employee</h1>
-    <app-employee-form></app-employee-form>
-    <div class="container">
-        <button type="button" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-primary" (click)="backToEmpolyee()" >Back to employee</button>
-        
-        <button type="button" class="btn btn-primary" [routerLink]="['/view-all-emp']">Back to view All</button>
-    </div>
 
-</div>
+    <div class="container">
+        <h1>Edit Employee</h1>
+        <app-employee-form></app-employee-form>
+        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" (click)="backToEmpolyee()" >View Employee</button>
+
+        <button type="button" class="btn btn-primary" [routerLink]="['/view-all-emp']"> View All</button>
+    </div>
