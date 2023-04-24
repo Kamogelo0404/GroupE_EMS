@@ -19,6 +19,7 @@
     margin: 5px;
     background:var(--dark-blue);
     border-color: none;
+    width: 20%;
 }
 
 .btn:hover{
