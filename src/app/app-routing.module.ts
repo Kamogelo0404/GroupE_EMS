@@ -8,7 +8,7 @@ import { EditEmpComponent } from './components/edit-emp/edit-emp.component';
 import { DeleteEmpComponent } from './components/delete-emp/delete-emp.component';
 
 const routes: Routes = [
-  { path:'', component:ViewSingleEmpComponent},
+   
   {path:'', component:HomeComponent},
   { path:'view-all-emp', component:ViewAllEmpComponent},
   { path:'view-emp', component:ViewSingleEmpComponent},
