@@ -2,10 +2,18 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 :root{
-    --light: #E9F8F9;
-    --light-blue: #C0EEF2;
-    --dark-blue: #537fe7f4;
-    --dark: #181823;
+    --light: #f1f3f4;
+    --dark: #212121;
+    
+    --black:#0c0c0c;
+    --white: #ffffff;
+    --off-white:#dddace;
+
+    --dark-blue:#002756;
+    --light-blue: #035b7a;
+    --red:#8a3b3f;
+    --green:#00633B;
+
 }
 
 .container{
@@ -13,20 +21,19 @@
 }
 
 .btn, button{
-    background-color: var(--dark-blue);
+    background-color: var(--light-blue);
     outline: none;
     padding: 5px;
     margin: 5px;
-    background:var(--dark-blue);
-    border-color: none;
+    background:var(--light-blue);
+    border: 1.5px solid var(--light-blue);
     width: 20%;
 }
 
 .btn:hover{
-    background-color: var(--light);
-    color:var(--dark-blue);
-    border-color: var(--dark-blue);
-   
+    background-color: var(--white);
+    color:var(--light-blue);
+    border: 1.5px solid var(--light-blue);
 }
 
 form{
@@ -39,3 +46,6 @@ h1,h2,h3,h4 p, a, label, input{
     color: var(--dark);
 }
 
+body{
+    background: var(--dark);
+}

@@ -17,4 +17,3 @@ export class DeleteEmpComponent {
     this.router.navigate(['/view-all-emp']);
   }
 }
-
