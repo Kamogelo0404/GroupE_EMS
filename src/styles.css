@@ -1,51 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-:root{
+:root {
     --light: #f1f3f4;
     --dark: #212121;
-    
-    --black:#0c0c0c;
-    --white: #ffffff;
-    --off-white:#dddace;
 
-    --dark-blue:#002756;
+    --black: #0c0c0c;
+    --white: #ffffff;
+    --off-white: #dddace;
+
+    --dark-blue: #002756;
     --light-blue: #035b7a;
-    --red:#8a3b3f;
-    --green:#00633B;
+    --red: #8a3b3f;
+    --green: #00633B;
+
+    --bg-light: #eaeaea;
 
 }
 
-.container{
+.container {
     align-content: center;
 }
 
-.btn, button{
+button,
+.btn {
     background-color: var(--light-blue);
     outline: none;
-    padding: 5px;
-    margin: 5px;
-    background:var(--light-blue);
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--light-blue);
     border: 1.5px solid var(--light-blue);
     width: 20%;
+    color: var(--white);
 }
 
-.btn:hover{
-    background-color: var(--white);
-    color:var(--light-blue);
+.btn:hover {
+    background-color: transparent;
+    color: var(--light-blue);
     border: 1.5px solid var(--light-blue);
 }
 
-form{
+form {
     padding-left: 0rem;
     padding-right: 45rem;
 }
 
 
-h1,h2,h3,h4 p, a, label, input{
+h1,
+h2,
+h3,
+h4 p,
+a,
+label,
+input {
     color: var(--dark);
 }
 
-body{
-    background: var(--dark);
+body {
+    background-color: var(--bg-light);
 }
+
+a .btn {
+    display: block;
+    text-overflow: none;
+    overflow: hidden;
+}
+
+
