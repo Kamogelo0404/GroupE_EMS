@@ -3,15 +3,12 @@
 <div class="container">
     <h2>Edit Employee</h2>
     <app-employee-form></app-employee-form><br>
-    <div class="container">
+    <div class="btn-group">
         <!-- <button type="button" class="btn btn-primary">Save</button>
         <button type="button" class="btn btn-primary" (click)="backToEmpolyee()">Cancel</button> -->
         <!-- <button type="button" class="btn btn-primary" [routerLink]="['/view-all-emp']">Back to view All</button> -->
 
         <button type="button" class="btn btn-primary">Submit</button>
-        <!-- TODO: create functionality for back -->
-
-        <button type="button" class="btn btn-primary" [routerLink]="['/view-all-emp']">Cancel</button>
-
+        <app-cancel-button></app-cancel-button>
     </div>
 </div>

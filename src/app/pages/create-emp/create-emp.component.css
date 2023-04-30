@@ -1,3 +1,4 @@
-.btn-actions{
-    text-align: end;
+.btn-group{
+    display: block;
+    text-align: right;
 }

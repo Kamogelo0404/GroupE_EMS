@@ -23,6 +23,11 @@ body {
     align-content: center;
 } */
 
+.btn-group{
+    display: block;
+    text-align: right;
+}
+
 .btn {
     width: 65px;
     padding: 3px;

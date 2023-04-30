@@ -10,9 +10,9 @@
     <div class="card-body">
       <app-employee-form></app-employee-form>
       <br>
-      <div class="btn-actions">
+      <div class="btn-group">
         <button class="btn btn-primary" type="button" [routerLink]="['/view-all-emp']">Submit</button>
-        <button class="btn btn-primary" type="button" (click)="back()">Cancel</button>
+        <app-cancel-button></app-cancel-button>
       </div>
     </div>
   </div>

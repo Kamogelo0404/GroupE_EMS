@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
+import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DeleteButtonComponent } from './components/delete-button/delete-button.
     HeaderComponent,
     EmployeeFormComponent,
     BackButtonComponent,
-    DeleteButtonComponent
+    DeleteButtonComponent,
+    CancelButtonComponent
   ],
   imports: [
     BrowserModule,

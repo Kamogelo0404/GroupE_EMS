@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
-  selector: 'app-back-button',
-  templateUrl: './back-button.component.html',
-  styleUrls: ['./back-button.component.css']
+  selector: 'app-cancel-button',
+  templateUrl: './cancel-button.component.html',
+  styleUrls: ['./cancel-button.component.css']
 })
-export class BackButtonComponent {
+export class CancelButtonComponent {
 
   constructor(private navigation:NavigationService){}
 
