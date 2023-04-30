@@ -30,7 +30,7 @@ import { SubmitButtonComponent } from './components/submit-button/submit-button.
     BackButtonComponent,
     DeleteButtonComponent,
     CancelButtonComponent,
-    SubmitButtonComponent
+    SubmitButtonComponent,
   ],
   imports: [
     BrowserModule,
