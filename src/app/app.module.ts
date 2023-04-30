@@ -14,6 +14,7 @@ import { EmployeeFormComponent } from './components/employee-form/employee-form.
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
+import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CancelButtonComponent } from './components/cancel-button/cancel-button.
     EmployeeFormComponent,
     BackButtonComponent,
     DeleteButtonComponent,
-    CancelButtonComponent
+    CancelButtonComponent,
+    SubmitButtonComponent
   ],
   imports: [
     BrowserModule,

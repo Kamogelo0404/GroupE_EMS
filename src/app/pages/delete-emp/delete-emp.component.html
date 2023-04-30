@@ -2,17 +2,18 @@
 <div class="container">
 
   <h2>Delete Employee</h2>
-    <h4>Are you sure you want to delete this employee?</h4>
+  <h4>Are you sure you want to delete this employee?</h4>
   <form action="">
 
-      <label for="surname" class="form-label">Last Name: <b>Doe</b></label><br>
-  
-      <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label><br>
-    
-      <label for="contact" class="form-label">Contact: <b>0118 999 881 999 </b></label><br>
-  
+    <label for="surname" class="form-label">Last Name: <b>Doe</b></label><br>
+
+    <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label><br>
+
+    <label for="contact" class="form-label">Contact: <b>0118 999 881 999 </b></label><br>
+
+    <div class="btn-actions">
       <button class="btn btn-primary" type="button" [routerLink]="['/view-all-emp']">Yes</button>
       <app-cancel-button></app-cancel-button>
-
+    </div>
   </form>
 </div>

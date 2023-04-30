@@ -13,7 +13,7 @@
                 <th scope="col">employee surname</th>
                 <th scope="col">Email</th>
                 <th scope="col">Contact Number</th>
-                <th scope="col">Function</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@
                 <td>johndoe@anemail.com</td>
                 <td>0118 999 881 999</td>
                 <td>
-                    <div class="btn-group" role="group">
+                    <div class="btn-actions">
                         <button class="btn btn-primary" type="button" [routerLink]="['/view-emp']">View</button>
                         <button class="btn btn-primary" type="button" [routerLink]="['/edit-emp']">Edit</button>
                         <app-delete-button></app-delete-button>
