@@ -1,7 +1,3 @@
-button{
-    width: 10%;
-}
-
-div{
-    text-align: center;
+.btn-actions{
+    text-align: end;
 }

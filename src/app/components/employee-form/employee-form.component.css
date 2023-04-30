@@ -1,8 +1,23 @@
-div{
-text-align: center;
+.card {
+    margin:0px 50px;
 }
 
-form{    
-padding-left: 31rem;
-padding-right: 13rem;
+.card-header {
+    background-color: var(--light-blue);
+}
+
+.card-header h4 {
+    color: var(--light);
+}
+
+.card-body {
+    margin: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+input{
+    margin-bottom: 5px;
 }
