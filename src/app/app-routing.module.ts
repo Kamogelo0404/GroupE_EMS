@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { ViewAllEmpComponent } from './components/view-all-emp/view-all-emp.component';
-import { ViewSingleEmpComponent } from './components/view-single-emp/view-single-emp.component';
-import { CreateEmpComponent } from './components/create-emp/create-emp.component';
-import { EditEmpComponent } from './components/edit-emp/edit-emp.component';
-import { DeleteEmpComponent } from './components/delete-emp/delete-emp.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ViewAllEmpComponent } from './pages/view-all-emp/view-all-emp.component';
+import { ViewSingleEmpComponent } from './pages/view-single-emp/view-single-emp.component';
+import { CreateEmpComponent } from './pages/create-emp/create-emp.component';
+import { EditEmpComponent } from './pages/edit-emp/edit-emp.component';
+import { DeleteEmpComponent } from './pages/delete-emp/delete-emp.component';
 
 const routes: Routes = [
    

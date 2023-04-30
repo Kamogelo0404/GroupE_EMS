@@ -7,7 +7,6 @@
 
     --black: #0c0c0c;
     --white: #ffffff;
-    --off-white: #dddace;
 
     --dark-blue: #002756;
     --light-blue: #035b7a;
@@ -15,7 +14,6 @@
     --green: #00633B;
 
     --bg-light: #eaeaea;
-
 }
 
 .container {
@@ -24,21 +22,20 @@
 
 button,
 .btn {
-    background-color: var(--light-blue);
-    outline: none;
+    width: 75px;
     padding: 3px;
     margin: 5px;
+
     background: var(--light-blue);
     border: 2px solid var(--light-blue);
-    width: 20%;
-    color: var(--white);
-    width: 75px;
+
     text-align: center;
     font-weight: 500;
+    color: var(--white);
 }
 
 .btn:hover {
-    background-color: transparent;
+    background: transparent;
     color: var(--light-blue);
     border: 2px solid var(--light-blue);
 }

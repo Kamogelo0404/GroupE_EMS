@@ -7,13 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./delete-emp.component.css']
 })
 export class DeleteEmpComponent {
-  constructor(private router: Router) {}
-
-  back(){
-    this.router.navigate(['/view-all-emp']);
-  }
-
-  confirmedDelete(){
-    this.router.navigate(['/view-all-emp']);
-  }
+  
 }
