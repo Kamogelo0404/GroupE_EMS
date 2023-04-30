@@ -26,18 +26,21 @@ button,
 .btn {
     background-color: var(--light-blue);
     outline: none;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 3px;
+    margin: 5px;
     background: var(--light-blue);
-    border: 1.5px solid var(--light-blue);
+    border: 2px solid var(--light-blue);
     width: 20%;
     color: var(--white);
+    width: 75px;
+    text-align: center;
+    font-weight: 500;
 }
 
 .btn:hover {
     background-color: transparent;
     color: var(--light-blue);
-    border: 1.5px solid var(--light-blue);
+    border: 2px solid var(--light-blue);
 }
 
 form {
@@ -49,10 +52,10 @@ form {
 h1,
 h2,
 h3,
-h4 p,
+h4, p,
 a,
 label,
-input {
+input, th, td{
     color: var(--dark);
 }
 
