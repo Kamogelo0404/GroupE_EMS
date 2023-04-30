@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common'
+
 
 @Component({
   selector: 'app-back-button',
@@ -8,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class BackButtonComponent {
 
-  constructor(private router: Router) {}
-  
-  back(){
-    this.router.navigate(['/view-all-emp']);
+  constructor(private location:Location){}
+
+  goBackToPrevPage(){
+    this.location.back();
   }
 }
