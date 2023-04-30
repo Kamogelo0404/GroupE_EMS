@@ -16,6 +16,10 @@
     --bg-light: #eaeaea;
 }
 
+body {
+    background-color: var(--bg-light);
+}
+
 .container {
     align-content: center;
 }
@@ -40,11 +44,6 @@ button,
     border: 2px solid var(--light-blue);
 }
 
-form {
-    padding-left: 0rem;
-    padding-right: 45rem;
-}
-
 
 h1,
 h2,
@@ -55,15 +54,4 @@ label,
 input, th, td{
     color: var(--dark);
 }
-
-body {
-    background-color: var(--bg-light);
-}
-
-a .btn {
-    display: block;
-    text-overflow: none;
-    overflow: hidden;
-}
-
 
