@@ -32,6 +32,12 @@ p{
     border: 2px solid var(--red);
 }
 
+.delete-btn:hover {
+    background: transparent;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
 .btn-actions{
     display: block;
     text-align: center;
