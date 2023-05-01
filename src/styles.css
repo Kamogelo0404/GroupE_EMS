@@ -92,5 +92,6 @@ input{
     .btn {
         padding: 1px;
         margin: 2px;
+        width: 55px;
     }
 }
