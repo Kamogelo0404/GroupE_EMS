@@ -1,37 +1,44 @@
 <app-back-button></app-back-button>
-
+<br>
 <div class="container-fluid">
-
-    <button type="button" class="btn btn-primary create-btn" [routerLink]="['/create-emp']">Create</button>
-
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Employee name</th>
-                <th scope="col">employee surname</th>
-                <th scope="col">Email</th>
-                <th scope="col">Contact Number</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- <tr *ngFor="let employee of employees"> -->
-            <tr>
-                <td>1</td>
-                <td>John</td>
-                <td>Doe</td>
-                <td>johndoe@anemail.com</td>
-                <td>0118 999 881 999</td>
-                <td>
-                    <div class="btn-actions">
-                        <button class="btn btn-primary" type="button" [routerLink]="['/view-emp']">View</button>
-                        <button class="btn btn-primary" type="button" [routerLink]="['/edit-emp']">Edit</button>
-                        <app-delete-button></app-delete-button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="card shadow">
+        <div class="card-body">
+            <div class="row">
+                <button type="button" class="btn btn-primary create-btn" [routerLink]="['/create-emp']">Create</button>
+            </div>
+            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                <table class="table my-0" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr *ngFor="let employee of employees"> -->
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>johndoe@anemail.com</td>
+                            <td>0118 999 881 999</td>
+                            <td>
+                                <div class="btn-actions">
+                                    <button class="btn btn-primary" type="button"
+                                        [routerLink]="['/view-emp']">View</button>
+                                    <button class="btn btn-primary" type="button"
+                                        [routerLink]="['/edit-emp']">Edit</button>
+                                    <app-delete-button></app-delete-button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
