@@ -1,19 +1,28 @@
-<app-back-button></app-back-button>
+
+<br>
+
 <div class="container">
-
-  <h2>Delete Employee</h2>
-  <h4>Are you sure you want to delete this employee?</h4>
-  <form action="">
-
-    <label for="surname" class="form-label">Last Name: <b>Doe</b></label><br>
-
-    <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label><br>
-
-    <label for="contact" class="form-label">Contact: <b>0118 999 881 999 </b></label><br>
-
-    <div class="btn-actions">
-      <button class="btn btn-primary" type="button" [routerLink]="['/view-all-emp']">Yes</button>
-      <app-cancel-button></app-cancel-button>
+  <br>
+  <div class="card shadow">
+    <div class="card-header py-3">
+      <h1>Delete Employee</h1>
     </div>
-  </form>
+    <div class="card-body">
+      <h4 class="m-0">Are you sure?</h4><br>
+      <p>Do you really want to delete this record? This process cannot be undone.</p>
+       <!--TODO : Maybe add summary of data being removed-->
+      <!-- <div class="emp-info-summary">
+        <label for="surname" class="form-label">Last Name: <b>Doe</b></label><br>
+        <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label>
+        <label for="contact" class="form-label">Contact: <b>0118 999 881 999 </b></label>
+      </div> -->
+        <br>
+      <div class="btn-actions">
+        <app-cancel-button></app-cancel-button>
+        <button type="button" class="btn btn-primary delete-btn" (click)="confirmDelete()">
+          <span class="button-text">Delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
