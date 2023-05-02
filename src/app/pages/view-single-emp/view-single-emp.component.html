@@ -1,27 +1,19 @@
 <app-back-button></app-back-button>
+
 <div class="container">
+    <h1>View Employee</h1>
+    <br>
+    <div class="card shadow">
+        <div class="card-header py-3">
+            <h4 class="m-0">Employee Information</h4>
+        </div>
+        <div class="card-body">
+            <app-employee-form></app-employee-form><br>
 
-      <div class="container"></div>
-      <h2>View Employee</h2>
-      <h4>Details: </h4>
-      <form action="">
-
-            <label for="firstname" class="form-label">First Name: <b>John</b></label><br>
-
-
-            <label for="surname" class="form-label">Last Name: <b>Doe</b></label><br>
-
-
-            <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label><br>
-
-
-            <label for="contact" class="form-label">Contact: <b>0118 999 881 999 </b></label><br>
-
-
-      </form>
-      <br>
-      <button type="button" class="btn btn-primary" [routerLink]="['/edit-emp']">Edit</button>
-      <app-delete-button></app-delete-button>
-
-
+            <div class="btn-actions">
+                  <button type="button" class="btn btn-primary" [routerLink]="['/edit-emp']">Edit</button>
+                  <app-delete-button></app-delete-button>
+            </div>
+        </div>
+    </div>
 </div>
