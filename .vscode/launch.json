@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "EmployeeManagementSystemApplication",
+      "request": "launch",
+      "mainClass": "com.EmployeeManagementSystem.EmployeeManagementSystem.EmployeeManagementSystemApplication",
+      "projectName": "EmployeeManagementSystem"
+    },
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",
