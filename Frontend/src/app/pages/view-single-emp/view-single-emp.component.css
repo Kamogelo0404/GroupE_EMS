@@ -1,0 +1,13 @@
+.info{
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.info-identifier{
+    font-weight: normal;
+}
+
+.card-body{
+    text-align: center;
+}
+  
