@@ -8,15 +8,20 @@ import { EmployeeService } from 'src/app/services/employee/employee.service';
   templateUrl: './view-all-emp.component.html',
   styleUrls: ['./view-all-emp.component.css'],
 })
-export class ViewAllEmpComponent{
+export class ViewAllEmpComponent implements OnInit {
+  constructor(
+    private employee: EmployeeService,
+    private router: Router
+  ) {}
 
-  // employees: Employee[];
+  employees: Employee[] = [];
 
-  // constructor(private employeeService: EmployeeService,private router: Router) {}
-
-  // ngOnInit(): void {
-  //   this.getAllEmployees();
-  // }
+  ngOnInit(): void {
+    this.employee.getAllEmployees().subscribe((employees: any) => {
+      console.table(employees);
+      this.employees = employees;
+    });
+  }
 
   // private getAllEmployees(){
   //   this.employeeService.getAllEmployees().subscribe(data => {
