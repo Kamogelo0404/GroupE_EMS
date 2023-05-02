@@ -7,8 +7,24 @@
         <div class="card-header py-3">
             <h4 class="m-0">Employee Information</h4>
         </div>
-        <div class="card-body">
-            <app-employee-form></app-employee-form><br>
+        <div class="card-body row">
+            <div class="col-md-12">
+                  <label for="firstName" class="form-label info-identifier">First Name: </label>
+                  <label for="empFirstname" class="form-label info">John</label><br>
+                </div>
+                <div class="col-md-12">
+                  <label for="lastName" class="form-label info-identifier">Last Name: </label>
+                  <label for="empFirstname" class="form-label info">Doe</label><br>
+                </div>
+              
+                <div class="col-md-12">
+                  <label for="contactNum" class="form-label info-identifier">Contact Number: </label>
+                  <label for="contact" class="form-label info">0118 999 881 999</label><br>
+                </div>
+                <div class="col-md-12">
+                  <label for="email" class="form-label info-identifier">Email: </label>
+                  <label for="email" class="form-label info">johndoe@anemail.com</label><br>
+                </div>
 
             <div class="btn-actions">
                   <button type="button" class="btn btn-primary" [routerLink]="['/edit-emp']">Edit</button>
