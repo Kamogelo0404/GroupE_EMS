@@ -11,6 +11,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.EmployeeManagementSystem.EmployeeManagementSystem.exception.ResourceNotFoundException;
 import com.EmployeeManagementSystem.EmployeeManagementSystem.models.Employee;
 import com.EmployeeManagementSystem.EmployeeManagementSystem.repo.EmployeeRepo;
 
@@ -38,10 +39,10 @@ public class EmployeeController {
         return employeeRepo.save(employee);
     }
 
-    @PutMapping("{empId}")
-    public ResponseEntity<Employee> update(@PathVariable int empId,@RequestBody Employee employee) {
-        Employee update = employeeRepo.findById(empId)
-            .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + empId));
+    @PutMapping("{id}")
+    public ResponseEntity<Employee> update(@PathVariable int id,@RequestBody Employee employee) {
+        Employee update = employeeRepo.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
 
         update.setFirstName(employee.getFirstName());
         update.setLastName(employee.getLastName());
@@ -53,9 +54,9 @@ public class EmployeeController {
         return ResponseEntity.ok(update);
     }
 
-    @DeleteMapping("{empId}")
-    public void  delete(@PathVariable("empId") int empId) {
-        employeeRepo.deleteById(empId);
+    @DeleteMapping("{id}")
+    public void  delete(@PathVariable("id") int id) {
+        employeeRepo.deleteById(id);
     }
 
 }
