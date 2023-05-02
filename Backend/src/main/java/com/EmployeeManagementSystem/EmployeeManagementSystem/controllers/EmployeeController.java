@@ -11,7 +11,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.EmployeeManagementSystem.EmployeeManagementSystem.exception.ResourceNotFoundException;
+import com.EmployeeManagementSystem.EmployeeManagementSystem.exceptions.ResourceNotFoundException;
 import com.EmployeeManagementSystem.EmployeeManagementSystem.models.Employee;
 import com.EmployeeManagementSystem.EmployeeManagementSystem.repo.EmployeeRepo;
 
@@ -30,7 +30,7 @@ public class EmployeeController {
     private EmployeeRepo employeeRepo;
     
     @GetMapping
-    public List<Employee>getEmployees(){
+    public List <Employee>getEmployees(){
         return employeeRepo.findAll();
     }
 

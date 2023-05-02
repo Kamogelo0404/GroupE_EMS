@@ -19,13 +19,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr *ngFor="let employee of employees"> -->
-                        <tr>
-                            <td>1</td>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>johndoe@anemail.com</td>
-                            <td>0118 999 881 999</td>
+                        <tr *ngFor="let employee of employees">
+                            <td>{{employee.id}}</td>
+                            <td>{{employee.firstName}}</td>
+                            <td>{{employee.lastName}}</td>
+                            <td>{{employee.email}}</td>
+                            <td>{{employee.contactNo}}</td>
                             <td>
                                 <div class="btn-actions">
                                     <button class="btn btn-primary" type="button"

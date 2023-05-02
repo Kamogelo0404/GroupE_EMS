@@ -2,6 +2,7 @@ package com.EmployeeManagementSystem.EmployeeManagementSystem.models;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,35 +12,24 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="employee")
 public class Employee {
+       @Id
+//     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
     public String firstName;
     public String lastName;
     public String email;
     public String contactNo;
-
-    public Employee() {
-    }
-
-
-    public Employee(int id, String firstName, String lastName, String email,String contactNo) {
-        
-        this.id=id;
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.email=email;
-        this.contactNo=contactNo;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    @Column(name = "id")
     public int getId() {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id=id;
     }
 
+    @Column(name = "firstName")
     public String getFirstName(){
         return firstName;
     }
@@ -48,6 +38,7 @@ public class Employee {
         this.firstName=firstName;
     }
 
+    @Column(name = "lastName")
     public String getLastName(){
         return lastName;
     }
@@ -56,6 +47,7 @@ public class Employee {
         this.lastName=lastName;
     }
 
+    @Column(name = "email")
     public String getEmail(){
         return email;
     }
@@ -64,6 +56,7 @@ public class Employee {
         this.email=email;
     }
 
+    @Column(name = "contactNo")
     public String getContactNo(){
         return contactNo;
     }

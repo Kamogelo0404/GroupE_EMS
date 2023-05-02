@@ -1,2 +1,1 @@
-create database employeeManagementSystem
-
+create database EmployeeManagementSystem;
