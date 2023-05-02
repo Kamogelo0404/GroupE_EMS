@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping(value="/employees")
+@RequestMapping("/employees")
 public class EmployeeController {
     @Autowired 
     private EmployeeRepo employeeRepo;
