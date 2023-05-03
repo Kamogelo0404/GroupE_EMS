@@ -16,6 +16,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SubmitButtonComponent } from './components/submit-button/submit-button.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

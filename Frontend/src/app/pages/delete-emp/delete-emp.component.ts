@@ -11,6 +11,7 @@ export class DeleteEmpComponent {
   constructor(private router:Router){}
 
   confirmDelete(){
+    
     this.router.navigate(['/view-all-emp']);
   }
 }

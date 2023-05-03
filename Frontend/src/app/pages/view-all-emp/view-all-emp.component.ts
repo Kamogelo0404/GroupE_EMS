@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { identity } from 'rxjs';
 import { Employee } from 'src/app/interface/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 
@@ -20,8 +21,11 @@ export class ViewAllEmpComponent implements OnInit {
     this.employee.getAllEmployees().subscribe((employees: any) => {
       console.table(employees);
       this.employees = employees;
+
+
     });
   }
+  
 
   // private getAllEmployees(){
   //   this.employeeService.getAllEmployees().subscribe(data => {
