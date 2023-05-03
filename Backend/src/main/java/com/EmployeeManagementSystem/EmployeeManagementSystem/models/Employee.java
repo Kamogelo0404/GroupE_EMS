@@ -15,11 +15,24 @@ public class Employee {
        @Id
 //     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    public String firstName;
-    public String lastName;
+    public String firstname;
+    public String lastname;
     public String email;
-    public String contactNo;
+    public String contactno;
     
+    public Employee() {
+    }
+
+
+    public Employee(int id, String firstname, String lastname, String email,String contactno) {
+        
+        this.id=id;
+        this.firstname=firstname;
+        this.lastname=lastname;
+        this.email=email;
+        this.contactno=contactno;
+    }
+
     @Column(name = "id")
     public int getId() {
         return id;
@@ -29,22 +42,22 @@ public class Employee {
         this.id=id;
     }
 
-    @Column(name = "firstName")
+    @Column(name = "firstname")
     public String getFirstName(){
-        return firstName;
+        return firstname;
     }
 
-    public void setFirstName(String firstName){
-        this.firstName=firstName;
+    public void setFirstName(String firstname){
+        this.firstname=firstname;
     }
 
-    @Column(name = "lastName")
+    @Column(name = "lastname")
     public String getLastName(){
-        return lastName;
+        return lastname;
     }
 
-    public void setLastName(String lastName){
-        this.lastName=lastName;
+    public void setLastName(String lastname){
+        this.lastname=lastname;
     }
 
     @Column(name = "email")
@@ -56,12 +69,12 @@ public class Employee {
         this.email=email;
     }
 
-    @Column(name = "contactNo")
+    @Column(name = "contactno")
     public String getContactNo(){
-        return contactNo;
+        return contactno;
     }
-    public void setContactNo(String contactNo){
-        this.contactNo=contactNo;
+    public void setContactNo(String contactno){
+        this.contactno=contactno;
     }
 
 }
