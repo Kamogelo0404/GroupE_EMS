@@ -9,7 +9,7 @@ import { Employee } from 'src/app/interface/employee';
 export class EmployeeService {
 
   // TODO: change the url to the correct one used by api
-  private url = "http://localhost:8080/api/employees";
+  private url = "http://localhost:8080/employees";
 
   constructor(private http:HttpClient) { }
   
