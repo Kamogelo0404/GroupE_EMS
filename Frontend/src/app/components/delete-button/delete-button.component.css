@@ -1,11 +1,10 @@
-button,
-.btn {
+.delete-btn{
     background-color: var(--red);
     background: var(--red);
     border: 2px solid var(--red);
 }
 
-.btn:hover {
+.delete-btn:hover {
     background-color: transparent;
     color: var(--red);
     border: 2px solid var(--red);

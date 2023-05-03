@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Employee } from 'src/app/employee';
+import { Employee } from 'src/app/interface/employee';
 import { NavigationService } from 'src/app/services/navigation/navigation.service';
 
 @Component({

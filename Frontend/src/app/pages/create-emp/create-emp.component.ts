@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { Employee } from 'src/app/employee';
-import { Employee } from 'src/app/employee';
+// import { Employee } from 'src/app/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
-//import { Employee } from 'src/app/interface/employee';
+import { Employee } from 'src/app/interface/employee';
 
 @Component({
   selector: 'app-create-emp',
@@ -13,6 +12,7 @@ import { EmployeeService } from 'src/app/services/employee/employee.service';
 export class CreateEmpComponent implements OnInit{
 
   employee: Employee = new Employee();
+  navigation: any;
 
 
   constructor(private employeeService: EmployeeService) {}
@@ -23,6 +23,7 @@ export class CreateEmpComponent implements OnInit{
   save(){
     console.log(this.employee);
     this.saveEmp(); 
+    this.navigation.back();
   }
 
   saveEmp()
