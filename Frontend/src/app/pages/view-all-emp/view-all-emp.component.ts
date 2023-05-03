@@ -11,19 +11,31 @@ import { EmployeeService } from 'src/app/services/employee/employee.service';
 })
 export class ViewAllEmpComponent implements OnInit {
   constructor(
-    private employee: EmployeeService,
+    private employeeService: EmployeeService,
     private router: Router
   ) {}
 
   employees: Employee[] = [];
 
   ngOnInit(): void {
-    this.employee.getAllEmployees().subscribe((employees: any) => {
+    this.getEmployees();
+  }
+
+
+  private getEmployees(){
+    this.employeeService.getAllEmployees().subscribe((employees: any) => {
       console.table(employees);
       this.employees = employees;
 
 
     });
+  }
+
+  deleteEmployee(id: any){
+    this.employeeService.deleteEmployee(id).subscribe( data => {
+      console.log(data);
+      this.getEmployees();
+    })
   }
   
 

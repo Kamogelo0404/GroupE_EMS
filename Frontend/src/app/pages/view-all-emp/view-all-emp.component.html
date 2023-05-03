@@ -31,7 +31,9 @@
                                         [routerLink]="['/view-emp']">View</button>
                                     <button class="btn btn-primary" type="button"
                                         [routerLink]="['/edit-emp']">Edit</button>
-                                    <app-delete-button></app-delete-button>
+                                        <button class="btn btn-primary" type="button"
+                                        (click) = "deleteEmployee(employee.id)" >delete</button>
+                                    <!-- <app-delete-button></app-delete-button> -->
                                 </div>
                             </td>
                         </tr>
