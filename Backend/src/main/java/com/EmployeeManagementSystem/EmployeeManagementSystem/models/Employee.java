@@ -8,32 +8,39 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="employee")
+@NoArgsConstructor
 public class Employee {
-       @Id
-//     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int id;
-    public String firstname;
-    public String lastname;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "first_name")
+    public String firstName;
+
+    @Column(name = "last_name")
+    public String lastName;
+
+    @Column(name = "email")
     public String email;
-    public String contactno;
+
+    @Column(name = "contact_no")
+    public String contactNo;
     
-    public Employee() {
-    }
-
-
-    public Employee(int id, String firstname, String lastname, String email,String contactno) {
+    public Employee(int id, String firstName, String lastName, String email,String contactNo) {
         
         this.id=id;
-        this.firstname=firstname;
-        this.lastname=lastname;
+        this.firstName=firstName;
+        this.lastName=lastName;
         this.email=email;
-        this.contactno=contactno;
+        this.contactNo=contactNo;
     }
 
-    @Column(name = "id")
+   
     public int getId() {
         return id;
     }
@@ -42,25 +49,25 @@ public class Employee {
         this.id=id;
     }
 
-    @Column(name = "firstname")
+    
     public String getFirstName(){
-        return firstname;
+        return firstName;
     }
 
-    public void setFirstName(String firstname){
-        this.firstname=firstname;
+    public void setFirstName(String firstName){
+        this.firstName=firstName;
     }
 
-    @Column(name = "lastname")
+   
     public String getLastName(){
-        return lastname;
+        return lastName;
     }
 
-    public void setLastName(String lastname){
-        this.lastname=lastname;
+    public void setLastName(String lastName){
+        this.lastName=lastName;
     }
 
-    @Column(name = "email")
+    
     public String getEmail(){
         return email;
     }
@@ -69,12 +76,12 @@ public class Employee {
         this.email=email;
     }
 
-    @Column(name = "contactno")
+    
     public String getContactNo(){
-        return contactno;
+        return contactNo;
     }
-    public void setContactNo(String contactno){
-        this.contactno=contactno;
+    public void setContactNo(String contactNo){
+        this.contactNo=contactNo;
     }
 
 }

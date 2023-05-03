@@ -30,7 +30,7 @@ public class EmployeeController {
     private EmployeeRepo employeeRepo;
     
     @GetMapping
-    public List <Employee>getEmployees(){
+    public List<Employee>getEmployees(){
         return employeeRepo.findAll();
     }
 
