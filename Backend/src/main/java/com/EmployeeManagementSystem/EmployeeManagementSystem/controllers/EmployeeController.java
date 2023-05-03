@@ -41,6 +41,14 @@ public class EmployeeController {
         return employeeRepo.save(employee);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Employee> getEmployeebyId(@PathVariable int id)
+    {
+        Employee employee = employeeRepo.
+        findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not found" + id));
+        return ResponseEntity.ok(employee);
+    }
+
     @PutMapping("{id}")
     public ResponseEntity<Employee> update(@PathVariable int id,@RequestBody Employee employee) {
         Employee update = employeeRepo.findById(id)
