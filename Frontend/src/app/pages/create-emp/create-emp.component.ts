@@ -15,7 +15,7 @@ export class CreateEmpComponent implements OnInit{
   navigation: any;
 
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService, private router:Router) {}
   ngOnInit(): void {
     
   }
@@ -24,6 +24,7 @@ export class CreateEmpComponent implements OnInit{
     console.log(this.employee);
     this.saveEmp(); 
     this.navigation.back();
+ 
   }
 
   saveEmp()
@@ -32,8 +33,10 @@ export class CreateEmpComponent implements OnInit{
     (this.employee).subscribe(data =>
     {
       console.log(data);
+      this.router.navigate(['./view-all-emp']);
     },
     error => console.log(error));
+    
   }
 
   back(){

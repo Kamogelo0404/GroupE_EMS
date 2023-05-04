@@ -11,15 +11,28 @@
       <h4 class="m-0">Are you sure?</h4><br>
       <p>Do you really want to delete this record? This process cannot be undone.</p>
        <!--TODO : Maybe add summary of data being removed-->
-      <!-- <div class="emp-info-summary">
-        <label for="surname" class="form-label">Last Name: <b>Doe</b></label><br>
-        <label for="email" class="form-label">Email: <b>johndoe@anemail.com</b></label>
-        <label for="contact" class="form-label">Contact: <b>0118 999 881 999 </b></label>
-      </div> -->
+       <div class="card-body row">
+        <div class="col-md-12">
+              <label for="firstName" class="form-label info-identifier">First Name: </label>
+              <label for="empFirstname" class="form-label info">{{employee.firstName}}</label><br>
+            </div>
+            <div class="col-md-12">
+              <label for="lastName" class="form-label info-identifier">Last Name: </label>
+              <label for="empFirstname" class="form-label info">{{employee.lastName}}</label><br>
+            </div>
+          
+            <div class="col-md-12">
+              <label for="contactNum" class="form-label info-identifier">Contact Number: </label>
+              <label for="contact" class="form-label info">{{employee.contactNo}}</label><br>
+            </div>
+            <div class="col-md-12">
+              <label for="email" class="form-label info-identifier">Email: </label>
+              <label for="email" class="form-label info">{{employee.email}}</label><br>
+            </div>
         <br>
       <div class="btn-actions">
         <app-cancel-button></app-cancel-button>
-        <button type="button" class="btn btn-primary delete-btn" (click)="confirmDelete()">
+        <button type="button" class="btn btn-primary delete-btn"  (click) = "confirmDelete(employee.id)" >
           <span class="button-text">Delete</span>
         </button>
       </div>

@@ -28,7 +28,10 @@
 
             <div class="btn-actions">
                   <button type="button" class="btn btn-primary" [routerLink]="['/edit-emp']">Edit</button>
-                  <app-delete-button></app-delete-button>
+                  <button type="button" class="btn btn-delete-btn"  (click) = "deleteEmployee(employee.id)" >
+                    <span class="button-text">Delete</span>
+                    </button>
+                  <!-- <app-delete-button></app-delete-button> -->
             </div>
         </div>
     </div>

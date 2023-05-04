@@ -19,14 +19,25 @@ export class ViewSingleEmpComponent implements OnInit {
     private route: ActivatedRoute 
   ) {}
 
-  ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+  ngOnInit():void{
+    this.getEmployee(this.id = this.route.snapshot.params['id']);
+    ;
 
+  }
+
+
+  private getEmployee(id:any){
+  
     this.employeeService.getEmployeeById(this.id).subscribe(data => {
-       console.log(data);
-       this.employee = data;
+      console.log(data);
+      this.employee = data;
     }, error => console.log(error));
 
+  }
+
+  deleteEmployee(id: any){
+ 
+    this.router.navigate(['./delete-emp', id]);   
   }
 
 }

@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'view-single-emp/:id', component: ViewSingleEmpComponent},
   {path:'create-emp', component:CreateEmpComponent},
   {path:'edit-emp', component:EditEmpComponent},
-  {path:'delete-emp', component:DeleteEmpComponent},
+  {path:'delete-emp/:id', component:DeleteEmpComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'} //default page used if page doesn't exist
 
 ];
