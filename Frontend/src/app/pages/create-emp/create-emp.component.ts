@@ -20,7 +20,7 @@ export class CreateEmpComponent implements OnInit{
     
   }
 
-  save(){
+  submit(){
     console.log(this.employee);
     this.saveEmp(); 
     this.navigation.back();
