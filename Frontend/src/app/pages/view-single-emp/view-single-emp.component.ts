@@ -40,4 +40,9 @@ export class ViewSingleEmpComponent implements OnInit {
     this.router.navigate(['./delete-emp', id]);   
   }
 
+  editEmployee(id: any)
+{
+  this.router.navigate(['./edit-emp', id]);
+}
+
 }
