@@ -43,6 +43,22 @@ export class EditEmpComponent implements OnInit{
 
   }
 
+  update()
+  {
+    this.employeeService.editEmployee(this.id, this.employee).subscribe
+    (data => {
+      this.goToEmployeeList();
+    }, error => console.log(error))
+
+  }
+
+  goToEmployeeList()
+  {
+    this.router.navigate(['./view-all-emp'])
+  }
+
+
+
   
 }
 
