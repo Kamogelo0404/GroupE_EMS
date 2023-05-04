@@ -33,6 +33,7 @@ export class CreateEmpComponent implements OnInit{
     (this.employee).subscribe(data =>
     {
       console.log(data);
+      alert('New employee added successfully');
       this.router.navigate(['./view-all-emp']);
     },
     error => console.log(error));
