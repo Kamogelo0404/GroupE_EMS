@@ -35,7 +35,13 @@ export class ViewAllEmpComponent implements OnInit {
     this.employeeService.deleteEmployee(id).subscribe( data => {
       console.log(data);
       this.getEmployees();
-    })
+    })    
+  }
+
+  editEmployee(id: any)
+  {
+    this.router.navigate(['./view-single-emp', id]);
+  
   }
   
 

@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'', component:HomeComponent},
   { path:'view-all-emp', component:ViewAllEmpComponent},
   { path:'view-emp', component:ViewSingleEmpComponent},
+  {path: 'view-single-emp/:id', component: ViewSingleEmpComponent},
   {path:'create-emp', component:CreateEmpComponent},
   {path:'edit-emp', component:EditEmpComponent},
   {path:'delete-emp', component:DeleteEmpComponent},
