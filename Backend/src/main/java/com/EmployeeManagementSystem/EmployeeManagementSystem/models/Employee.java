@@ -18,6 +18,7 @@ public class Employee {
     private int id;
 
     @Column(name = "first_name")
+    @NotNull
     public String firstName;
 
     @Column(name = "last_name")

@@ -16,7 +16,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,12 +33,14 @@ import { FormsModule } from '@angular/forms';
     DeleteButtonComponent,
     CancelButtonComponent,
     SubmitButtonComponent,
+        
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
