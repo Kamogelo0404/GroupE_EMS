@@ -1,5 +1,8 @@
 package com.EmployeeManagementSystem.EmployeeManagementSystem.models;
 
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,6 +14,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="employee")
 @NoArgsConstructor
+@SQLDelete(sql = "UPDATE employee SET deleted=true WHERE id=?")
+@Where(clause = "deleted = false")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +33,9 @@ public class Employee {
 
     @Column(name = "contact_no")
     public String contactNo;
+
+    @Column (name = "deleted")
+    private boolean deleted = Boolean.FALSE;
     
     public Employee(int id, String firstName, String lastName, String email,String contactNo) {
         
@@ -41,6 +49,15 @@ public class Employee {
    
     public int getId() {
         return id;
+    }
+
+    public boolean isDeleted()
+    {
+        return deleted;
+    }
+    public void setDelete(boolean deleted)
+    {
+        this.deleted = deleted;
     }
 
     public void setId(int id) {

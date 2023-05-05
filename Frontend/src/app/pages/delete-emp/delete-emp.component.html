@@ -26,12 +26,12 @@
               <label for="email" class="form-label info-identifier">Email: </label>
               <label for="email" class="form-label info">{{employee.email}}</label><br>
             </div>
+          
+           
         <br>
       <div class="btn-actions">
-        <button type="button" class="btn btn-primary cancel-btn" (click)="back()" title="Go to previous page">
-          <span class="button-text">Cancel</span>
-      </button>
-        <button type="button" class="btn btn-primary danger-btn"  (click) = "confirmDelete(employee.id)" >
+        <app-cancel-button></app-cancel-button>
+        <button type="button" class="btn btn-primary delete-btn"  (click) = "confirmDelete(employee.id)" >
           <span class="button-text">Delete</span>
         </button>
       </div>
