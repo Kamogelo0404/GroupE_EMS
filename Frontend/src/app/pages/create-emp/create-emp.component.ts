@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 // import { Employee } from 'src/app/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 import { Employee } from 'src/app/interface/employee';
+import Swal from 'sweetalert2';
+ 
+
 
 @Component({
   selector: 'app-create-emp',
@@ -10,7 +13,7 @@ import { Employee } from 'src/app/interface/employee';
   styleUrls: ['./create-emp.component.css']
 })
 export class CreateEmpComponent implements OnInit{
-
+  name="Angular";
   employee: Employee = new Employee();
   navigation: any;
 
@@ -24,6 +27,9 @@ export class CreateEmpComponent implements OnInit{
     console.log(this.employee);
     this.saveEmp(); 
     this.navigation.back();
+    
+    
+    
 
   }
 
@@ -33,13 +39,14 @@ export class CreateEmpComponent implements OnInit{
     (this.employee).subscribe(data =>
     {
       console.log(data);
-      alert('New employee added successfully');
+      Swal.fire('Thank you...', 'You submitted successfully!', 'success'
+      );
       this.router.navigate(['./view-all-emp']);
     },
     error => console.log(error));
     
   }
-
+  
 
 
 

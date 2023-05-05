@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/interface/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-emp',
@@ -48,6 +49,21 @@ export class EditEmpComponent implements OnInit{
     this.employeeService.editEmployee(this.id, this.employee).subscribe
     (data => {
       this.goToEmployeeList();
+      Swal.fire({
+        icon: 'success',
+        title: 'Updated',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        customClass: {
+          confirmButton: 'btn btn-success'
+        },
+        confirmButtonText: '<i class="fas fa-check-circle"></i> OK'
+      });
+      
     }, error => console.log(error))
 
   }

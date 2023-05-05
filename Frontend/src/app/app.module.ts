@@ -18,6 +18,8 @@ import { CancelButtonComponent } from './components/cancel-button/cancel-button.
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 import { FormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
