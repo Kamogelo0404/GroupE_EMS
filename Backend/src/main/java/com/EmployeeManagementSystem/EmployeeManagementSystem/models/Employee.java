@@ -32,6 +32,9 @@ public class Employee {
     @Column(name = "contact_no")
     public String contactNo;
 
+    @Column(name = "deleted")
+    public boolean deleted;
+
     public Employee(int id, String firstName, String lastName, String email, String contactNo) {
 
         this.id = id;
@@ -41,18 +44,19 @@ public class Employee {
         this.contactNo = contactNo;
     }
 
+
     public int getId() {
         return id;
     }
 
-    // public boolean isDeleted()
-    // {
-    // return deleted;
-    // }
-    // public void setDelete(boolean deleted)
-    // {
-    // this.deleted = deleted;
-    // }
+    public boolean isDeleted()
+    {
+        return deleted;
+    }
+    public void setDelete(boolean deleted)
+    {
+        this.deleted = deleted;
+    }
 
     public void setId(int id) {
         this.id = id;
