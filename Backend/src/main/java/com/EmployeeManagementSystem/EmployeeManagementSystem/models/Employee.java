@@ -51,6 +51,15 @@ public class Employee {
         return id;
     }
 
+    public boolean isDeleted()
+    {
+        return deleted;
+    }
+    public void setDelete(boolean deleted)
+    {
+        this.deleted = deleted;
+    }
+
     public void setId(int id) {
         this.id=id;
     }
