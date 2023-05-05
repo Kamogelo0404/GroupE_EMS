@@ -1,8 +1,28 @@
-.btn-actions{
+.btn-actions {
     display: block;
     text-align: right;
 }
 
-.card{
+.card {
     margin: 0px 5px;
+}
+
+table th,
+table td {
+    padding: 5px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    table th,
+    table td {
+        padding: 3px;
+    }
+
+    .btn-actions {
+        display: block;
+        text-align: right;
+    }
 }
