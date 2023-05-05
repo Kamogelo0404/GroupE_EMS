@@ -20,11 +20,11 @@ export class CreateEmpComponent implements OnInit{
     
   }
 
-  save(){
+  submit(){
     console.log(this.employee);
     this.saveEmp(); 
     this.navigation.back();
- 
+
   }
 
   saveEmp()
@@ -40,9 +40,7 @@ export class CreateEmpComponent implements OnInit{
     
   }
 
-  back(){
-    //this.router.navigate(['/view-all-emp']);
-  }
+
 
 
 }

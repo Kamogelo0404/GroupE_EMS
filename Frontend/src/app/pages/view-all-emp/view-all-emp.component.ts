@@ -46,9 +46,5 @@ editEmployee(id: any)
 {
   this.router.navigate(['./edit-emp', id]);
 }
-  // private getAllEmployees(){
-  //   this.employeeService.getAllEmployees().subscribe(data => {
-  //     this.employees = data;
-  //   })
-  // }
+
 }
