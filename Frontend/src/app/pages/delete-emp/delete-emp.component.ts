@@ -30,7 +30,7 @@ export class DeleteEmpComponent implements OnInit {
   
     this.employeeService.getEmployeeById(this.id).subscribe(data => {
       console.log(data);
-      this.employee.deleted = true;
+
       this.employee = data;
     }, error => console.log(error));
 
@@ -38,8 +38,10 @@ export class DeleteEmpComponent implements OnInit {
 
 
   confirmDelete(id:any){
-    this.employeeService.editEmployee(id, this.employee).subscribe( data => {
+    this.employeeService.deleteEmployee(id).subscribe( data => {
       console.log(data);
+      this.employee.deleted = true;
+
      this.getEmployee(this.id = this.route.snapshot.params['id']); 
      //this.employee.deleted = true;
      this.router.navigate(['./view-all-emp']);
