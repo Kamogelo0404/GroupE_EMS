@@ -80,9 +80,27 @@ input, th, td{
     margin: 10px;
 }
 
+.flex-container{
+    margin:5px;
+}
+
 .form-label {
     font-weight: bold;
 }
+
+.danger-btn{
+    background-color: var(--red);
+    background: var(--red);
+    border: 2px solid var(--red);
+}
+
+.danger-btn:hover {
+    background-color: transparent;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+
 
 input{
     margin-bottom: 5px;
@@ -92,6 +110,19 @@ input{
     .btn {
         padding: 1px;
         margin: 2px;
-        width: 55px;
+        width: 65px;
+    }
+
+    .card-body{
+        margin:5px;
+        padding:5px;
+    }
+
+    .container-fluid {
+        padding:0px;
+    }
+
+    .mobile-hide{
+        display: none !important;
     }
 }
