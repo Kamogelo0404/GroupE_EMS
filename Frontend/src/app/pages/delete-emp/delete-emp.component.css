@@ -29,16 +29,16 @@ h4{
 }
 
 .cancel-btn {
-    background: var(--white);
-    border: 2px solid var(--dark);
-    color: var(--dark);
+    background: var(--light-blue);
+    color: var(--light);
+    border: 2px solid var(--light-blue);
     margin-left:5px;
 }
 
 .cancel-btn:hover {
-    background: var(--dark);
-    color: var(--light);
-    border: 2px solid var(--dark);
+    background: var(--white);
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
 }
 
 @media only screen and (max-width: 768px) {

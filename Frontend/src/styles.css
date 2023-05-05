@@ -100,13 +100,13 @@ input, th, td{
     border: 2px solid var(--red);
 }
 
-.okay-btn{
+.safe-btn{
     background-color: var(--green);
     background: var(--green);
     border: 2px solid var(--green);
 }
 
-.okay-btn:hover {
+.safe-btn:hover {
     background-color: transparent;
     color: var(--green);
     border: 2px solid var(--green);
