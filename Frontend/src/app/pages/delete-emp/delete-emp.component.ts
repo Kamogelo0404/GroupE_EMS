@@ -8,23 +8,23 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-delete-emp',
   templateUrl: './delete-emp.component.html',
-  styleUrls: ['./delete-emp.component.css']
+  styleUrls: ['./delete-emp.component.css'],
 })
 export class DeleteEmpComponent implements OnInit {
  id:any;
+ 
  employee: Employee = new Employee();
   constructor(private employeeService: EmployeeService, 
     private router:Router,
-    private route:ActivatedRoute){}
+    private route:ActivatedRoute,
+    private navigation:NavigationService){}
 
-
-
-  ngOnInit():void{
-    this.getEmployee(this.id = this.route.snapshot.params['id']);
-    ;
-
+    back():void{
+      this.navigation.back();
+    }
+  ngOnInit(): void {
+    this.getEmployee((this.id = this.route.snapshot.params['id']));
   }
-
 
   private getEmployee(id:any){
   
@@ -39,6 +39,7 @@ export class DeleteEmpComponent implements OnInit {
   confirmDelete(id:any){
     this.employeeService.deleteEmployee(id).subscribe( data => {
       console.log(data);
+      //this.employee.deleted = true;
      this.getEmployee(this.id = this.route.snapshot.params['id']); 
      
      Swal.fire({
@@ -62,8 +63,7 @@ export class DeleteEmpComponent implements OnInit {
       
     
      this.router.navigate(['./view-all-emp']);
-    });
-   
+    });   
   } 
 
 

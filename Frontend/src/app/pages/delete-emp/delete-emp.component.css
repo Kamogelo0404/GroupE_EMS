@@ -11,10 +11,6 @@ h4{
     font-size: 2rem;
 }
 
-p{
-    font-size:20px;
-}
-
 .card-header{
     background-color:var(--red);
 }
@@ -27,20 +23,22 @@ p{
     text-align: center;
 }
 
-.delete-btn{
-    background: var(--red);
-    border: 2px solid var(--red);
-}
-
-.delete-btn:hover {
-    background: transparent;
-    color: var(--red);
-    border: 2px solid var(--red);
-}
-
 .btn-actions{
     display: block;
     text-align: center;
+}
+
+.cancel-btn {
+    background: var(--light-blue);
+    color: var(--light);
+    border: 2px solid var(--light-blue);
+    margin-left:5px;
+}
+
+.cancel-btn:hover {
+    background: var(--white);
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
 }
 
 @media only screen and (max-width: 768px) {
