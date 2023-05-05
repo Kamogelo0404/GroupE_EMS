@@ -17,6 +17,7 @@ import { DeleteButtonComponent } from './components/delete-button/delete-button.
 import { CancelButtonComponent } from './components/cancel-button/cancel-button.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DeleteButtonComponent,
     CancelButtonComponent,
     SubmitButtonComponent,
+    FilterPipe,
         
   ],
   imports: [

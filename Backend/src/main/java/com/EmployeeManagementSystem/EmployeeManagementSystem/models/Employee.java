@@ -14,8 +14,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="employee")
 @NoArgsConstructor
-@SQLDelete(sql = "UPDATE employee SET deleted=true WHERE id=?")
-@Where(clause = "deleted = false")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,8 +32,6 @@ public class Employee {
     @Column(name = "contact_no")
     public String contactNo;
 
-    @Column (name = "deleted")
-    private boolean deleted = Boolean.FALSE;
     
     public Employee(int id, String firstName, String lastName, String email,String contactNo) {
         
