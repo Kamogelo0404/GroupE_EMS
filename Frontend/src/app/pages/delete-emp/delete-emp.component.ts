@@ -36,7 +36,7 @@ export class DeleteEmpComponent implements OnInit {
 
 
   confirmDelete(id:any){
-    this.employeeService.deleteEmployee(id).subscribe( data => {
+    this.employeeService.editEmployee(id, this.employee).subscribe( data => {
       console.log(data);
      this.getEmployee(this.id = this.route.snapshot.params['id']); 
      this.router.navigate(['./view-all-emp']);
