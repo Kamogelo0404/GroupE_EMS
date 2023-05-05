@@ -20,7 +20,7 @@ export class CreateEmpComponent implements OnInit{
     firstName: new FormControl('',Validators.required),
     lastName: new FormControl('',Validators.required),
     email: new FormControl('',[Validators.required, Validators.email]),
-    contactNo: new FormControl('',Validators.required),
+    contactNo: new FormControl('',[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
   });
   
 
@@ -70,6 +70,7 @@ export class CreateEmpComponent implements OnInit{
 
   saveEmp()
   {
+    
     // this.employeeService.createEmployee
     // (this.employee).subscribe(data =>
     // {
