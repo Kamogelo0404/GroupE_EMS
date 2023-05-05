@@ -11,6 +11,7 @@ import { NavigationService } from 'src/app/services/navigation/navigation.servic
 })
 export class DeleteEmpComponent implements OnInit {
  id:any;
+ 
  employee: Employee = new Employee();
   constructor(private employeeService: EmployeeService, 
     private router:Router,
@@ -29,6 +30,7 @@ export class DeleteEmpComponent implements OnInit {
   
     this.employeeService.getEmployeeById(this.id).subscribe(data => {
       console.log(data);
+      this.employee.deleted = true;
       this.employee = data;
     }, error => console.log(error));
 
@@ -39,6 +41,7 @@ export class DeleteEmpComponent implements OnInit {
     this.employeeService.editEmployee(id, this.employee).subscribe( data => {
       console.log(data);
      this.getEmployee(this.id = this.route.snapshot.params['id']); 
+     //this.employee.deleted = true;
      this.router.navigate(['./view-all-emp']);
     });
    
