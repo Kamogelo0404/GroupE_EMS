@@ -32,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BackButtonComponent,
     DeleteButtonComponent,
     CancelButtonComponent,
-    SubmitButtonComponent,    
+    SubmitButtonComponent,
+        
   ],
   imports: [
     BrowserModule,
