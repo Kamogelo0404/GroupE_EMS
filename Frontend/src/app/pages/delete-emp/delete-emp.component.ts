@@ -7,42 +7,39 @@ import { NavigationService } from 'src/app/services/navigation/navigation.servic
 @Component({
   selector: 'app-delete-emp',
   templateUrl: './delete-emp.component.html',
-  styleUrls: ['./delete-emp.component.css']
+  styleUrls: ['./delete-emp.component.css'],
 })
 export class DeleteEmpComponent implements OnInit {
- id:any;
- employee: Employee = new Employee();
-  constructor(private employeeService: EmployeeService, 
-    private router:Router,
-    private route:ActivatedRoute){}
+  id: any;
 
+  employee: Employee = new Employee();
+  constructor(
+    private employeeService: EmployeeService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
-
-  ngOnInit():void{
-    this.getEmployee(this.id = this.route.snapshot.params['id']);
-    ;
-
+  ngOnInit(): void {
+    this.getEmployee((this.id = this.route.snapshot.params['id']));
   }
 
-
-  private getEmployee(id:any){
-  
-    this.employeeService.getEmployeeById(this.id).subscribe(data => {
-      console.log(data);
-      this.employee = data;
-    }, error => console.log(error));
-
+  private getEmployee(id: any) {
+    this.employeeService.getEmployeeById(this.id).subscribe(
+      (data) => {
+        console.log(data);
+        this.employee.deleted = true;
+        this.employee = data;
+      },
+      (error) => console.log(error)
+    );
   }
 
-
-  confirmDelete(id:any){
-    this.employeeService.editEmployee(id, this.employee).subscribe( data => {
+  confirmDelete(id: any) {
+    this.employeeService.editEmployee(id, this.employee).subscribe((data) => {
       console.log(data);
-     this.getEmployee(this.id = this.route.snapshot.params['id']); 
-     this.router.navigate(['./view-all-emp']);
+      this.getEmployee((this.id = this.route.snapshot.params['id']));
+      //this.employee.deleted = true;
+      this.router.navigate(['./view-all-emp']);
     });
-   
-  } 
-
-
+  }
 }

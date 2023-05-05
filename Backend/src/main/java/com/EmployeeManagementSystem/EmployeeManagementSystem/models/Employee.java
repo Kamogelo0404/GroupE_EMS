@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 @NoArgsConstructor
 public class Employee {
     @Id
@@ -32,59 +32,62 @@ public class Employee {
     @Column(name = "contact_no")
     public String contactNo;
 
-    
-    public Employee(int id, String firstName, String lastName, String email,String contactNo) {
-        
-        this.id=id;
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.email=email;
-        this.contactNo=contactNo;
+    public Employee(int id, String firstName, String lastName, String email, String contactNo) {
+
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.contactNo = contactNo;
     }
 
-   
     public int getId() {
         return id;
     }
 
+    // public boolean isDeleted()
+    // {
+    // return deleted;
+    // }
+    // public void setDelete(boolean deleted)
+    // {
+    // this.deleted = deleted;
+    // }
+
     public void setId(int id) {
-        this.id=id;
+        this.id = id;
     }
 
-    
-    public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName){
-        this.firstName=firstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-   
-    public String getLastName(){
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName){
-        this.lastName=lastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    
-    public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email){
-        this.email=email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    
-    public String getContactNo(){
+    public String getContactNo() {
         return contactNo;
     }
-    public void setContactNo(String contactNo){
-        this.contactNo=contactNo;
+
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
     }
 
 }
-

@@ -4,5 +4,5 @@ export class Employee {
     lastName?: string;
     email?: string;
     contactNo?: string;
-    delete?: boolean;
+    deleted?: boolean;
 }
