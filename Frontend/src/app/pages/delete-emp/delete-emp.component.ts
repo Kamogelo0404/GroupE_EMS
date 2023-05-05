@@ -14,8 +14,12 @@ export class DeleteEmpComponent implements OnInit {
  employee: Employee = new Employee();
   constructor(private employeeService: EmployeeService, 
     private router:Router,
-    private route:ActivatedRoute){}
+    private route:ActivatedRoute,
+    private navigation:NavigationService){}
 
+    back():void{
+      this.navigation.back();
+    }
 
 
   ngOnInit():void{
@@ -40,8 +44,7 @@ export class DeleteEmpComponent implements OnInit {
       console.log(data);
      this.getEmployee(this.id = this.route.snapshot.params['id']); 
      this.router.navigate(['./view-all-emp']);
-    });
-   
+    });   
   } 
 
 

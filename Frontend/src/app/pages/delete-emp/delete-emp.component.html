@@ -1,7 +1,5 @@
 
-<br>
-
-<div class="container">
+<div class="container-fluid">
   <br>
   <div class="card shadow">
     <div class="card-header py-3">
@@ -30,8 +28,10 @@
             </div>
         <br>
       <div class="btn-actions">
-        <app-cancel-button></app-cancel-button>
-        <button type="button" class="btn btn-primary delete-btn"  (click) = "confirmDelete(employee.id)" >
+        <button type="button" class="btn btn-primary cancel-btn" (click)="back()" title="Go to previous page">
+          <span class="button-text">Cancel</span>
+      </button>
+        <button type="button" class="btn btn-primary danger-btn"  (click) = "confirmDelete(employee.id)" >
           <span class="button-text">Delete</span>
         </button>
       </div>
