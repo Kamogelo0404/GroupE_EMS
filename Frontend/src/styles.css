@@ -79,6 +79,12 @@ td {
     color: var(--dark);
 }
 
+label{
+    word-break: break-word; 
+    /* max-width: 200px;  */
+    white-space: normal;
+}
+
 .card {
     margin: 0px 50px;
 }
