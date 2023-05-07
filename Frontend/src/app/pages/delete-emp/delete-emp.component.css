@@ -12,6 +12,10 @@ h4{
     font-size: 2rem;
 }
 
+p{
+    margin-top: 1rem;
+}
+
 .card-header{
     background-color:var(--red);
 }
@@ -22,6 +26,23 @@ h4{
 
 .card-body{
     text-align: center;
+}
+
+.info-label{
+    padding-left: 15px;
+    text-align: end;
+}
+
+.emp-info{
+    text-align: start;
+}
+
+.info{
+    font-weight: normal;
+}
+
+.col-xs-6{
+    width: 50%;
 }
 
 .btn-actions{
