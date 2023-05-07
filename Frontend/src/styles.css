@@ -23,7 +23,7 @@ body {
     align-content: center;
 } */
 
-.btn-actions{
+.btn-actions {
     margin: 1rem 0rem;
     display: block;
     text-align: start;
@@ -79,9 +79,8 @@ td {
     color: var(--dark);
 }
 
-label{
-    word-break: break-word; 
-    /* max-width: 200px;  */
+label {
+    word-break: break-word;
     white-space: normal;
 }
 
