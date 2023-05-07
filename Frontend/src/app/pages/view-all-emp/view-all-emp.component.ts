@@ -16,6 +16,7 @@ export class ViewAllEmpComponent implements OnInit {
   ) {}
 
   employees: Employee[] = [];
+  public searchString! : String
 
   ngOnInit(): void {
     this.getEmployees();
