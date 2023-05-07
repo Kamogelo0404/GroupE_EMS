@@ -23,11 +23,6 @@ h4{
     text-align: center;
 }
 
-.btn-actions{
-    display: block;
-    text-align: center;
-}
-
 .cancel-btn {
     background: var(--light-blue);
     color: var(--light);

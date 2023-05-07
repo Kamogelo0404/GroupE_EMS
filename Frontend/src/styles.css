@@ -23,6 +23,12 @@ body {
     align-content: center;
 } */
 
+.btn-actions{
+    margin: 1rem 0rem;
+    display: block;
+    text-align: center;
+}
+
 .btn {
     width: 65px;
     padding: 3px 3px 3px 0px;

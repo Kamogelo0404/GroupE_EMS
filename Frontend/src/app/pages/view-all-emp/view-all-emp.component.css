@@ -1,5 +1,5 @@
 .btn-actions {
-    display: block;
+    margin: 2px 0px;
     text-align: right;
 }
 
@@ -9,7 +9,8 @@
 
 table th,
 table td {
-    padding: 5px;
+    padding: 7px;
+    overflow:hidden;
 }
 
 
@@ -22,7 +23,9 @@ table td {
     }
 
     .btn-actions {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
         text-align: right;
     }
 }
