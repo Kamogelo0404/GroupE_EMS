@@ -3,12 +3,17 @@
 }
 
 h1{
-    color:var(--red)
+    color:var(--red);
+    margin-bottom:0px;
 }
 
 h4{
     font-weight: bold;
     font-size: 2rem;
+}
+
+p{
+    margin-top: 1rem;
 }
 
 .card-header{
@@ -23,7 +28,25 @@ h4{
     text-align: center;
 }
 
+.info-label{
+    padding-left: 15px;
+    text-align: end;
+}
+
+.emp-info{
+    text-align: start;
+}
+
+.info{
+    font-weight: normal;
+}
+
+.col-xs-6{
+    width: 50%;
+}
+
 .btn-actions{
+    margin: 1rem 0rem;
     display: block;
     text-align: center;
 }

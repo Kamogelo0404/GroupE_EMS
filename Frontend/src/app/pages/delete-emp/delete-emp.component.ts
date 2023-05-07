@@ -3,54 +3,63 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/interface/employee';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 import { NavigationService } from 'src/app/services/navigation/navigation.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-delete-emp',
   templateUrl: './delete-emp.component.html',
-  styleUrls: ['./delete-emp.component.css']
+  styleUrls: ['./delete-emp.component.css'],
 })
 export class DeleteEmpComponent implements OnInit {
- id:any;
- 
- employee: Employee = new Employee();
-  constructor(private employeeService: EmployeeService, 
-    private router:Router,
-    private route:ActivatedRoute,
-    private navigation:NavigationService){}
+  id: any;
 
-    back():void{
-      this.navigation.back();
-    }
+  employee: Employee = new Employee();
+  constructor(
+    private employeeService: EmployeeService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private navigation: NavigationService
+  ) {}
 
-
-  ngOnInit():void{
-    this.getEmployee(this.id = this.route.snapshot.params['id']);
-    ;
-
+  back(): void {
+    this.navigation.back();
+  }
+  ngOnInit(): void {
+    this.getEmployee((this.id = this.route.snapshot.params['id']));
   }
 
-
-  private getEmployee(id:any){
-  
-    this.employeeService.getEmployeeById(this.id).subscribe(data => {
-      console.log(data);
-
-      this.employee = data;
-    }, error => console.log(error));
-
+  private getEmployee(id: any) {
+    this.employeeService.getEmployeeById(this.id).subscribe(
+      (data) => {
+        console.log(data);
+        this.employee = data;
+      },
+      (error) => console.log(error)
+    );
   }
 
-
-  confirmDelete(id:any){
-    this.employeeService.deleteEmployee(id).subscribe( data => {
+  confirmDelete(id: any) {
+    this.employeeService.deleteEmployee(id).subscribe((data) => {
       console.log(data);
-      this.employee.deleted = true;
+      //this.employee.deleted = true;
+      this.getEmployee((this.id = this.route.snapshot.params['id']));
 
-     this.getEmployee(this.id = this.route.snapshot.params['id']); 
-     //this.employee.deleted = true;
-     this.router.navigate(['./view-all-emp']);
-    });   
-  } 
-
-
+      Swal.fire({
+        icon: 'warning',
+        title: 'Successfully Removed Employee',
+        confirmButtonColor: '#d33',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown',
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp',
+        },
+        customClass: {
+          confirmButton: 'btn btn-success',
+        },
+        confirmButtonText: '<i class="fa fa-trash"></i> OK',
+      });
+      this.router.navigate(['./view-all-emp']);
+    });
+  }
 }

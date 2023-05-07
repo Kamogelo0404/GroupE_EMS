@@ -3,7 +3,12 @@
 <div class="container-fluid">
     <div class="card shadow">
         <div class="card-body">
-            <button type="button" class="btn btn-primary create-btn" [routerLink]="['/create-emp']">Create</button>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-primary create-btn" [routerLink]="['/create-emp']">Create</button>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search.." [(ngModel)]="searchString">
+                </div>
+            </div>
 
             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                 <table class="table my-0" id="dataTable">
@@ -12,20 +17,20 @@
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Surname</th>
-                            <th class="mobile-hide" scope="col">Email</th>
                             <th class="mobile-hide" scope="col">Contact#</th>
+                            <th class="mobile-hide" scope="col">Email</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let employee of employees">
+                        <tr *ngFor="let employee of employees | filter: searchString">
                             <td>{{employee.id}}</td>
                             <td>{{employee.firstName}}</td>
                             <td>{{employee.lastName}}</td>
-                            <td class="mobile-hide" >{{employee.email}}</td>
-                            <td class="mobile-hide" >{{employee.contactNo}}</td>
-                            <td>
-                                <div class="btn-actions vertical-btn">
+                            <td class="mobile-hide">{{employee.contactNo}}</td>
+                            <td class="mobile-hide">{{employee.email}}</td>
+                            <td class="btn-col">
+                                <div class="btn-actions">
                                     <button class="btn btn-primary" type="button"
                                         (click)="viewEmployee(employee.id)">View</button>
                                     <button class="btn btn-primary safe-btn" type="button"
@@ -34,8 +39,6 @@
                                         (click)="deleteEmployee(employee.id)">Delete</button>
                                     <!-- <app-delete-button></app-delete-button> -->
                                 </div>
-
-
                             </td>
                         </tr>
                     </tbody>

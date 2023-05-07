@@ -1,8 +1,38 @@
-.btn-actions{
-    display: block;
+/* .left-side{
+    text-align: left;
+}
+
+.right-side{
+    text-align: right;
+} */
+
+.card {
+    margin: 0px 5px;
+}
+
+table th,
+table td {
+    padding: 7px;
+    overflow:hidden;
+}
+
+.btn-actions {
+    margin: 2px 0px;
     text-align: right;
 }
 
-.card{
-    margin: 0px 5px;
+
+@media only screen and (max-width: 768px) {
+
+    table th,
+    table td {
+        padding: 3px;
+    }
+
+    .btn-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: right;
+    }
 }

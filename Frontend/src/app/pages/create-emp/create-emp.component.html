@@ -2,7 +2,6 @@
 
 <div class="container">
   <h1>Create Employee</h1>
-  <br>
   <div class="card shadow">
     <div class="card-header py-3">
       <h4 class="m-0">Employee Information</h4>
@@ -12,7 +11,7 @@
 
         <div class="col-md-6 form-group">
           <label for="firstName" class="form-label">First Name</label>
-          <input type="text" class="form-control" id="firstName" 
+          <input type="text" class="form-control" id="firstName" autofocus
           [(ngModel)] = "employee.firstName" name="firstName" formControlName="firstName" >
           <span class="text-danger"
           *ngIf="(createFormControl.firstName.touched || submitted) && createFormControl.firstName.hasError('required')">
@@ -56,7 +55,6 @@
           </span>
         </div>
       </form>
-      <br>
       <div class="btn-actions">
         <button type="button" class="btn btn-primary" (click)="onSubmit()">
           <span class="button-text">Submit</span>
