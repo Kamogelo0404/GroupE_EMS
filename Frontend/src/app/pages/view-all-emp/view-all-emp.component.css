@@ -1,7 +1,10 @@
-.btn-actions {
-    margin: 2px 0px;
-    text-align: right;
+/* .left-side{
+    text-align: left;
 }
+
+.right-side{
+    text-align: right;
+} */
 
 .card {
     margin: 0px 5px;
@@ -13,6 +16,10 @@ table td {
     overflow:hidden;
 }
 
+.btn-actions {
+    margin: 2px 0px;
+    text-align: right;
+}
 
 
 @media only screen and (max-width: 768px) {
