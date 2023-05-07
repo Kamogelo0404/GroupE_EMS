@@ -3,7 +3,8 @@
 }
 
 h1{
-    color:var(--red)
+    color:var(--red);
+    margin-bottom:0px;
 }
 
 h4{
