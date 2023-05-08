@@ -7,28 +7,53 @@
             <h4 class="m-0">Employee Information</h4>
         </div>
         <div class="card-body">
-            <form class="row g-3" action="">
+            <form class="row g-3" [formGroup]="createForm">
 
                 <div class="col-md-6">
                   <label for="firstName" class="form-label">First Name</label>
                   <input type="text" class="form-control" id="firstName" 
-                  [(ngModel)] = "employee.firstName" name="firstName">
+                  [(ngModel)] = "employee.firstName" name="firstName" formControlName="firstName">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.firstName.touched || submitted) && createFormControl.firstName.hasError('required')">
+                  First Name is required
+                  </span>
+
                 </div>
                 <div class="col-md-6">
                   <label for="lastName" class="form-label">Last Name</label>
                   <input type="text" class="form-control" id="lastName"
-                  [(ngModel)] = "employee.lastName" name="lastName">
+                  [(ngModel)] = "employee.lastName" name="lastName" formControlName="lastName">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.lastName.touched || submitted) && createFormControl.lastName.hasError('required')">
+                  Last Name is required
+                  </span>
                 </div>
               
                 <div class="col-md-6">
                   <label for="contactNum" class="form-label">Contact Number</label>
                   <input type="tel" class="form-control" id="contactNo"
-                  [(ngModel)] = "employee.contactNo" name = "contactNo">
+                  [(ngModel)] = "employee.contactNo" name = "contactNo" formControlName="contactNo">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.contactNo.touched || submitted) && createFormControl.contactNo.hasError('required')">
+                  Contact Number is required
+                  </span>
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.contactNo.touched || submitted) && createFormControl.contactNo.hasError('pattern')">
+                  Contact Number requires 10 digits
+                  </span>
                 </div>
                 <div class="col-md-6">
                   <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email"
-                  [(ngModel)] = "employee.email" name = "email">
+                  [(ngModel)] = "employee.email" name = "email" formControlName="email">
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.email.touched || submitted) && createFormControl.email.hasError('required')">
+                  Email is required
+                  </span>
+                  <span class="text-danger"
+                  *ngIf="(createFormControl.email.touched || submitted) && createFormControl.email.hasError('email')">
+                  a correct email format is required
+                  </span>
                 </div>
   
               </form>
