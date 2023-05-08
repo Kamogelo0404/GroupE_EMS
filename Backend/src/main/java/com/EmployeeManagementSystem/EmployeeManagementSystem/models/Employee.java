@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "employee")
 @NoArgsConstructor
+@SQLDelete(sql = "UPDATE employee SET deleted=true WHERE id=?")
+@Where(clause = "deleted = false")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
